@@ -1,11 +1,23 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import { useState } from 'react';
 
 
 function Nav() {
 
   function showNavigation() {
+
+
+    const [currentTabIndex, setCurrentTabIndex] = useState(0);
+ 
+    const handleTabChange = (e, tabIndex) => {
+      console.log(tabIndex);
+      setCurrentTabIndex(tabIndex);
+    };
+
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
@@ -20,22 +32,39 @@ function Nav() {
               Logout
             </a>
           </li>
+          {/* TODO: Also we need to send HOme as we removed it from over all return statement  */}
         </ul>
       );
     } else {
       return (
         <div>
-        <ul>
-          <li> <Link to="/signup">
-                   <span>Signup</span> 
-                </Link></li>
-       
-               
-              <li><Link to="/login">
-                    Login
-                </Link></li>
-                
-                </ul>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Tabs value={currentTabIndex} onChange={handleTabChange}>
+              <Tab label="Login" > Login </Tab>
+              <Tab label="Signup">  Signup</Tab>
+              <Tab label="Home"> Home </Tab>
+            </Tabs>
+        </Box>
+        {/* TAB 1 Contents */}
+        {currentTabIndex === 0 && (
+          <Box sx={{ p: 3 }}>
+            <Link to="/login"></Link>
+          </Box>
+        )}
+ 
+        {/* TAB 2 Contents */}
+        {currentTabIndex === 1 && (
+          <Box sx={{ p: 3 }}>
+            <Link to="/signup"></Link>
+          </Box>
+        )}
+ 
+        {/* TAB 3 Contents */}
+        {currentTabIndex === 2 && (
+          <Box sx={{ p: 3 }}>
+            <Link to="/"></Link>
+          </Box>
+        )}
         </div>
       );
     }
@@ -44,13 +73,6 @@ function Nav() {
   return (
     <div>
     <header>
-      
-              <Link to="/">
-                  Home
-              </Link>
-        
-    
-    
       <nav>
         {showNavigation()}
       </nav>

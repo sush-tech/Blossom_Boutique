@@ -25,7 +25,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
-  color: var(--light);
+  color: var(--dark);
 }
 
 h1,
@@ -201,7 +201,7 @@ input:focus {
   text-align: center;
 }
 
-.error-text {
+#error-text {
   color: var(--error);
 }
 
