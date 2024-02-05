@@ -45,21 +45,21 @@ function Nav() {
               <Tab label="Home"> Home </Tab>
             </Tabs>
         </Box>
-        {/* TAB 1 Contents */}
+        {/* TAB Login Contents */}
         {currentTabIndex === 0 && (
           <Box sx={{ p: 3 }}>
             <Link to="/login"></Link>
           </Box>
         )}
  
-        {/* TAB 2 Contents */}
+        {/* TAB Signup Contents */}
         {currentTabIndex === 1 && (
           <Box sx={{ p: 3 }}>
             <Link to="/signup"></Link>
           </Box>
         )}
  
-        {/* TAB 3 Contents */}
+        {/* TAB Home Contents */}
         {currentTabIndex === 2 && (
           <Box sx={{ p: 3 }}>
             <Link to="/"></Link>
