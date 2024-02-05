@@ -3,7 +3,6 @@ import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
-import { Box } from "@chakra-ui/react";
 
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -32,9 +31,7 @@ function Login(props) {
 
   return (
     <div>
-      <Box as='button' p={4} color='white' fontWeight='bold' borderRadius='md' bgGradient='linear(to-r, teal.500, green.500)' _hover={{ 
-        bgGradient: 'linear(to-r, red.500, yellow.500)', }}>
-          
+    
       <Link to="/signup">← Go to Signup</Link>
 
       <h2>Login</h2>
@@ -66,10 +63,12 @@ function Login(props) {
         ) : null}
         <div className="flex-row flex-end">
           <button type="submit">Submit</button>
+    
         </div>
       </form>
-      </Box>
+   
     </div>
+ 
   );
 }
 

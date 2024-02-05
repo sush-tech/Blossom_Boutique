@@ -1,6 +1,6 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import { Box } from "@chakra-ui/react";;
+
 
 
 function Nav() {
@@ -24,39 +24,39 @@ function Nav() {
       );
     } else {
       return (
-        <Box  w='100%'>
+        <div>
         <ul>
-          <li>
-            <Link to="/signup">
-              Signup
-            </Link>
-          </li>
-          <li>
-            <Link to="/login">
-              Login
-            </Link>
-          </li>
-        </ul>
-         </Box>
+          <li> <Link to="/signup">
+                   <span>Signup</span> 
+                </Link></li>
+       
+               
+              <li><Link to="/login">
+                    Login
+                </Link></li>
+                
+                </ul>
+        </div>
       );
     }
   }
 
   return (
-    <Box display="flex" alignItems="center" justifyContent="space-between" border='1px' borderColor='gray.200'>
+    <div>
     <header>
-      {/* <img src="./images/sakura.png"alt="image"/>  */}
-      <h1>
-        <Link to="/">
-        Home
-        </Link>
-      </h1>
+      
+              <Link to="/">
+                  Home
+              </Link>
+        
+    
     
       <nav>
         {showNavigation()}
       </nav>
     </header>
-     </Box>
+    
+     </div>
   );
 }
 
