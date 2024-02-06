@@ -1,8 +1,6 @@
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import Box from '@mui/material/Box';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import { Box, Tab, Tabs, Typography } from "@mui/material";
 import { useState } from 'react';
 
 
@@ -40,7 +38,7 @@ function Nav() {
         <div>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs value={currentTabIndex} onChange={handleTabChange}>
-              <Tab label="Login" > Login </Tab>
+              <Tab label="Login" >  </Tab>
               <Tab label="Signup">  Signup</Tab>
               <Tab label="Home"> Home </Tab>
             </Tabs>
