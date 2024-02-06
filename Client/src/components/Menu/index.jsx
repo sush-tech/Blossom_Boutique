@@ -36,6 +36,8 @@ return (
           'aria-labelledby': 'basic-button',
         }}
       >
+        {/* todo: coniditon if logged in */}
+        
         <MenuItem onClick={handleClose}>Profile</MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>

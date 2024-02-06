@@ -32,7 +32,7 @@ function Nav() {
               Logout
             </a>
           </li>
-          {/* TODO: Also we need to send HOme as we removed it from over all return statement  */}
+          {/* TODO: Also we need to send Home as we removed it from over all return statement  */}
         </ul>
       );
     } else {

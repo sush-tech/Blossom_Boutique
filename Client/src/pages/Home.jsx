@@ -1,4 +1,4 @@
-// import CategoryMenu from "../components/CategoryMenu";
+import CategoryMenu from "../components/CategoryMenu";
 
 const Home = () => {
   console.log("home page");

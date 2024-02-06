@@ -8,7 +8,8 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Nav from './components/Nav';
-import Menu from './components/Menu';
+// import Menu from './components/Menu';
+import { StoreProvider } from './utils/GlobalState';
 
 
 const httpLink = createHttpLink({
@@ -33,8 +34,13 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-        <Nav /> <Menu />
-        <Outlet />
+      <div>
+        <StoreProvider>
+          <Nav /> 
+          {/* <Menu /> Todo: this should come under if condiiton for logged in */}
+          <Outlet />
+        </StoreProvider>
+      </div>
     </ApolloProvider>
   );
 }
