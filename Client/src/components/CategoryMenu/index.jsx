@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { useStoreContext } from '../../utils/GlobalState';
+// import { Box, Tab, Tabs, Typography } from "@mui/material";
 import {
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
@@ -41,6 +42,13 @@ function CategoryMenu() {
     });
   };
 
+  // const [currentTabIndex, setCurrentTabIndex] = useState(0);
+ 
+  //   const handleTabChange = (e, tabIndex) => {
+  //     console.log(tabIndex);
+  //     setCurrentTabIndex(tabIndex);
+  //   };
+
   return (
     <div>
       <h2>Choose a Category:</h2>
@@ -63,6 +71,62 @@ function CategoryMenu() {
       </button>
     </div>
   );
+
+
+
+  // return (
+  //   <div>
+  //     <h2>Choose a Category:</h2>
+  //     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+  //     <Tabs value={currentTabIndex} onChange={handleTabChange}>
+
+  //     {categories.map((item) => (
+         
+  //       <Tab
+  //         label="categories" 
+  //         key={item._id}
+  //         onClick={() => {
+  //           handleClick(item._id);
+  //         }}
+  //       >
+  //         {item.name}
+  //       </Tab>
+  //     ))}
+  //     <Tab
+  //       onClick={() => {
+  //         handleClick('');
+  //       }}
+  //     >
+  //       All
+  //     </Tab>
+
+  //     </Tabs>
+  //     </Box>
+
+
+      
+  //       {/* TAB Signup Contents */}
+  //       {currentTabIndex === 1 && (
+  //         <Box sx={{ p: 3 }}>
+  //           <Link to="/signup"></Link>
+  //         </Box>
+  //       )}
+ 
+  //       {/* TAB Home Contents */}
+  //       {currentTabIndex === 2 && (
+  //         <Box sx={{ p: 3 }}>
+  //           <Link to="/"></Link>
+  //         </Box>
+  //       )}
+
+
+
+
+
+  //   </div>
+  // );
+
+
 }
 
 export default CategoryMenu;

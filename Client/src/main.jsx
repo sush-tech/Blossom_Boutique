@@ -8,6 +8,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Error from './pages/Error';
 import Detail from './pages/Detail.jsx';
+import Success from './pages/Success.jsx';
+import OrderHistory from './pages/OrderHistory.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,13 @@ const router = createBrowserRouter([
       }, {
         path: '/products/:id',
         element: <Detail />
-      }
+      },{
+        path: '/success',
+        element: <Success />
+      }, {
+        path: '/orderHistory',
+        element: <OrderHistory />
+      },
     ]
   }
 ]);

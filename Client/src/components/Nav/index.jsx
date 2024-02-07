@@ -38,7 +38,7 @@ function Nav() {
         <div>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs value={currentTabIndex} onChange={handleTabChange}>
-              <Tab label="Login" >  </Tab>
+              <Tab label="Login"> Login  </Tab>
               <Tab label="Signup">  Signup</Tab>
               <Tab label="Home"> Home </Tab>
             </Tabs>

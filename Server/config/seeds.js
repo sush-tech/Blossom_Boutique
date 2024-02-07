@@ -30,7 +30,7 @@ db.once('open', async () => {
     {
       name: '12 Classic Red Roses',
       description:'Timeless and classic, red roses never go out of style. Set the tone for romance with a lovely gift that’s sure to delight. Lush red roses and baby’s breath are lavishly designed to create a moment they’ll never forget.',
-      image: 'Client/public/images/12-classic-red-roses.webp',
+      image: '12Roses.webp',
       category: categories[0]._id,
       price: 39.99,
       quantity: 500

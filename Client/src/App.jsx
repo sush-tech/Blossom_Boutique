@@ -10,6 +10,7 @@ import { setContext } from '@apollo/client/link/context';
 import Nav from './components/Nav';
 // import Menu from './components/Menu';
 import { StoreProvider } from './utils/GlobalState';
+import ToggleColorMode from './components/DarkMode';
 
 
 const httpLink = createHttpLink({
@@ -37,7 +38,8 @@ function App() {
       <div>
         <StoreProvider>
           <Nav /> 
-          {/* <Menu /> Todo: this should come under if condiiton for logged in */}
+          {/* <DarkMode />//Todo: similar to store provider you gotta implement this */}
+          {/* <APPBAR /> Todo: this should come under if condiiton for logged in */}
           <Outlet />
         </StoreProvider>
       </div>

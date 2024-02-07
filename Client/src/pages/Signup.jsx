@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
-import CssBaseline from '@mui/material/CssBaseline';
+// import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 
 function Signup(props) {
@@ -34,7 +34,7 @@ function Signup(props) {
 
   return (
     <div>
-       <CssBaseline />
+       
       <Container maxWidth="sm">
       {/* <Link to="/login">← Go to Login</Link> */}
 
