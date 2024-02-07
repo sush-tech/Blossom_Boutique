@@ -5,6 +5,7 @@ import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 
 function Login(props) {
@@ -39,7 +40,7 @@ function Login(props) {
       
       {/* <Link to="/signup">← Go to Signup</Link> */}
 
-      <h2>Login</h2>
+      <h1> <PersonOutlineIcon  sx={{ fontSize: 50 }}  /> Login</h1>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email address:</label>

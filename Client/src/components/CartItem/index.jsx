@@ -1,6 +1,7 @@
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 const CartItem = ({ item }) => {
 
@@ -58,7 +59,7 @@ const CartItem = ({ item }) => {
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
-            🗑️
+            <DeleteOutlineIcon/>
           </span>
         </div>
       </div>
