@@ -1,7 +1,7 @@
 import CategoryMenu from "../components/CategoryMenu";
 import ProductList from "../components/ProductList";
 import Cart from "../components/Cart";
-import ToggleColorMode from "../components/DarkMode";
+// import ToggleColorMode from "../components/DarkMode";
 
 
 const Home = () => {

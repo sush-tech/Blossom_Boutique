@@ -10,7 +10,7 @@ import { setContext } from '@apollo/client/link/context';
 import Nav from './components/Nav';
 // import Menu from './components/Menu';
 import { StoreProvider } from './utils/GlobalState';
-import ToggleColorMode from './components/DarkMode';
+// import ToggleColorMode from './components/DarkMode';
 
 
 const httpLink = createHttpLink({
