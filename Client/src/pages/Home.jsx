@@ -1,6 +1,7 @@
 import CategoryMenu from "../components/CategoryMenu";
 import ProductList from "../components/ProductList";
 import Cart from "../components/Cart";
+import { AppBar } from "@mui/material";
 // import ToggleColorMode from "../components/DarkMode";
 
 

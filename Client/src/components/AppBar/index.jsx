@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import Cart from '../Cart';
+// import Cart from '../Cart';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -174,8 +174,8 @@ function ResponsiveAppBar() {
             </Menu>
 
           </Box>
-        
-          <Cart></Cart> 
+{/*         
+          <Cart></Cart>  */}
           {/* //Todo: Should handle this inside cart pages, using menu like here may be  */}
         </Toolbar>
       </Container>
