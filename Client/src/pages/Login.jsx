@@ -37,8 +37,6 @@ function Login(props) {
     <div>
       <CssBaseline />
       <Container maxWidth="sm">
-      
-      {/* <Link to="/signup">← Go to Signup</Link> */}
 
       <h1> <PersonOutlineIcon  sx={{ fontSize: 50 }}  /> Login</h1>
       <form onSubmit={handleFormSubmit}>
@@ -73,6 +71,7 @@ function Login(props) {
         </div>
       </form>
       </Container>
+      <h3>Don't have an account?  <Link to="/signup">Signup</Link> </h3>
    
     </div>
  

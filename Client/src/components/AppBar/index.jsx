@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Cart from '../Cart';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -35,7 +36,23 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+
+
   return (
+//     <AppBar position="static">
+//     <Toolbar>
+//         <Box
+//             component="img"
+//             sx={{
+//             height: 64,
+//             }}
+//             alt="Your logo."
+//             src={Logo}
+//         />
+// ...
+//     </Toolbar>
+// </AppBar>
+
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -151,9 +168,15 @@ function ResponsiveAppBar() {
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
+               
               ))}
+              
             </Menu>
+
           </Box>
+        
+          <Cart></Cart> 
+          {/* //Todo: Should handle this inside cart pages, using menu like here may be  */}
         </Toolbar>
       </Container>
     </AppBar>
