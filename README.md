@@ -47,6 +47,8 @@ npm install express sequelize mysql2
 
 ## General Information
 
+This is using MERN stack.
+
 ## Demonstration
 
 ## Live Application Link
