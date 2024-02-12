@@ -6,7 +6,6 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import ResponsiveAppBar from './components/AppBar';
 import Nav from './components/Nav';
 // import Menu from './components/Menu';
 import { StoreProvider } from './utils/GlobalState';
@@ -37,7 +36,6 @@ function App() {
     <ApolloProvider client={client}>
       <div>
         <StoreProvider>
-        <ResponsiveAppBar> </ResponsiveAppBar>
           <Nav /> 
           {/* <DarkMode />//Todo: similar to store provider you gotta implement this */}
           {/* <APPBAR /> Todo: this should come under if condiiton for logged in */}
