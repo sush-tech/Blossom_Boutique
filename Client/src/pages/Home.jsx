@@ -1,7 +1,9 @@
 import CategoryMenu from "../components/CategoryMenu";
 import ProductList from "../components/ProductList";
 import Cart from "../components/Cart";
-import { AppBar } from "@mui/material";
+import Testimonials from "../components/Testimonials";
+import FAQ from "../components/FAQ";
+import Footer from "../components/Footer";
 // import ToggleColorMode from "../components/DarkMode";
 
 
@@ -9,10 +11,12 @@ const Home = () => {
   console.log("home page");
   return ( 
     <div>
-      <p>welcome to the home page</p>
       <CategoryMenu />
       <ProductList />
       <Cart />
+      <Testimonials/>
+      <FAQ/>
+      <Footer/>
     </div>
   );
 };

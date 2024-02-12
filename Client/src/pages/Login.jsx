@@ -11,11 +11,12 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import createTheme from "@mui/material/styles/createTheme";
 
 function Copyright(props) {
   return (
@@ -85,7 +86,6 @@ export default function Login(props) {
               label="Email Address"
               name="email"
               type="email"
-              autoComplete="email"
               autoFocus
               onChange={handleChange}
             />
@@ -119,7 +119,7 @@ export default function Login(props) {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

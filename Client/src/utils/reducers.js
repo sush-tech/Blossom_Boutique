@@ -1,5 +1,6 @@
 import {
   UPDATE_PRODUCTS,
+  UPDATE_USER,
   ADD_TO_CART,
   UPDATE_CART_QUANTITY,
   REMOVE_FROM_CART,
@@ -15,6 +16,12 @@ export const reducer = (state, action) => {
   switch (action.type) {
     // Returns a copy of state with an update products array. We use the action.products property and spread it's contents into the new array.
     case UPDATE_PRODUCTS:
+      return {
+        ...state,
+        products: [...action.products],
+      };
+
+    case UPDATE_USER:
       return {
         ...state,
         products: [...action.products],

@@ -11,7 +11,8 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import createTheme from "@mui/material/styles/createTheme";
 import { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
@@ -83,7 +84,7 @@ export default function SignUp(props) {
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  autoComplete="given-name"
+                  
                   name="firstName"
                   required
                   fullWidth
@@ -102,7 +103,7 @@ export default function SignUp(props) {
                   label="Last Name"
                   type="lastName"
                   name="lastName"
-                  autoComplete="family-name"
+                  
                   onChange={handleChange}
                 />
               </Grid>
@@ -115,7 +116,7 @@ export default function SignUp(props) {
                   type="email"
                   id="email"
                   onChange={handleChange}
-                  autoComplete="email"
+                  
                 />
               </Grid>
               <Grid item xs={12}>
@@ -127,7 +128,7 @@ export default function SignUp(props) {
                   type="password"
                   id="pwd"
                   onChange={handleChange}
-                  autoComplete="new-password"
+                 
                 />
               </Grid>
               <Grid item xs={12}>

@@ -39,7 +39,7 @@ db.once('open', async () => {
       name: 'Florists Choice Daily Deal',
       category: categories[1]._id,
       description:'Can’t decide? How about a surprise! Designer’s Choice Daily Deal is a creative mix of seasonal blooms arranged with the designer’s freshest selection. You get a perfect arrangement every time. Your arrangement will include the florists choice of fresh flowers.',
-      image: 'deal-of-the-day.webp',
+      image: 'dailychoice.webp',
       price: 49.99,
       quantity: 20
     },

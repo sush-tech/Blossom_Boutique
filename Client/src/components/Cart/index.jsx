@@ -11,12 +11,39 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CloseIcon from '@mui/icons-material/Close';
 import './style.css';
 import { Link } from 'react-router-dom';
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import IconButton from '@mui/material/IconButton';
+
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+  '& .MuiDialogContent-root': {
+    padding: theme.spacing(2),
+  },
+  '& .MuiDialogActions-root': {
+    padding: theme.spacing(1),
+  },
+}));
 
 const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     if (data) {
@@ -72,30 +99,88 @@ const Cart = () => {
     );
   }
 
+  // return (
+  //   <div className="cart">
+  //     <div className="close" onClick={toggleCart} >
+  //       <CloseIcon/>
+  //     </div>
+  //     <h2>Shopping Cart</h2>
+  //     {state.cart && state.cart.length ? (
+  //       <div>
+  //         {state.cart.map((item) => (
+  //           <CartItem key={item._id} item={item} />
+  //         ))}
+
+  //         <div className="flex-row space-between">
+  //           <strong>Total: ${calculateTotal()}</strong>
+
+  //           {Auth.loggedIn() ? (
+  //             <button onClick={submitCheckout}>Checkout</button>
+  //           ) : (
+  //             <span>
+  //                <Link to="/login">(log in to check out)</Link>
+  //             </span>
+  //           )}
+  //         </div>
+  //       </div>
+  //     ) : (
+  //       <h3>
+  //         <span role="img" aria-label="shocked">
+  //           😱
+  //         </span>
+  //         You haven't added anything to your cart yet!
+  //       </h3>
+  //     )}
+  //   </div>
+  // );
   return (
-    <div className="cart">
-      <div className="close" onClick={toggleCart} >
-        <CloseIcon/>
-      </div>
-      <h2>Shopping Cart</h2>
+    
+    <React.Fragment>
+      <ShoppingCartIcon/> 
+      <Button variant="contained" onClick={handleClickOpen}>
+      Open Cart
+      </Button>
+      <BootstrapDialog
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={open}
+      >
+        <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
+          Shopping Cart
+        </DialogTitle>
+        <IconButton
+          aria-label="close"
+          onClick={handleClose}
+          sx={{
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+          </IconButton>
+          <DialogContent dividers>
+          {/* <h2>Shopping Cart</h2> */}
       {state.cart && state.cart.length ? (
         <div>
           {state.cart.map((item) => (
             <CartItem key={item._id} item={item} />
           ))}
-
-          <div className="flex-row space-between">
+          
             <strong>Total: ${calculateTotal()}</strong>
-
-            {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+            <DialogActions>
+              {Auth.loggedIn() ? (
+              <Button autoFocus onClick={submitCheckout}>Checkout</Button>
             ) : (
-              <span>
+              <Button onClick={handleClose}>
                  <Link to="/login">(log in to check out)</Link>
-              </span>
+              </Button>
             )}
-          </div>
-        </div>
+        </DialogActions>
+           
+      </div>
+        
       ) : (
         <h3>
           <span role="img" aria-label="shocked">
@@ -104,8 +189,11 @@ const Cart = () => {
           You haven't added anything to your cart yet!
         </h3>
       )}
-    </div>
+      </DialogContent>
+        
+      </BootstrapDialog>
+    </React.Fragment>
   );
-};
+}
 
 export default Cart;

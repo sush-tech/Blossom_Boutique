@@ -20,14 +20,14 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Blossom Boutique
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
   );
 }
-
+//Todo: future scope of this project
 const steps = ['Shipping address', 'Payment details', 'Review your order'];
 
 function getStepContent(step) {
@@ -68,7 +68,7 @@ export default function Checkout() {
       >
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            Company name
+            Blossom Boutique
           </Typography>
         </Toolbar>
       </AppBar>

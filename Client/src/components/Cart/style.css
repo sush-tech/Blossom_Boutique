@@ -1,7 +1,7 @@
 .cart {
-  position: fixed;
-  top: 0;
-  right: 0;
+  position: absolute;
+  top: 40;
+  right: 40;
   min-width: 20%;
   max-width: 30%;
   max-height: 60%;
@@ -11,7 +11,7 @@
   box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
   border-bottom-left-radius: .5rem;
 }
-
+/* TODO: the cart should be like menu open thingi */
 .cart h2 {
   font-size: 1.5rem;
   border-bottom: 1px solid var(--dark);
@@ -21,8 +21,8 @@
 
 .cart .close {
   position: absolute;
-  top: .5rem;
-  right: .5rem;
+  top: 40rem;
+  right: 40rem;
   cursor: pointer;
   color: var(--tertiary);
 }
@@ -32,9 +32,9 @@
 }
 
 .cart-closed {
-  position: fixed;
-  top: 2%;
-  right: 1%;
+  position: absolute;
+  top: 20%;
+  right: 15%;
   font-size: 2rem;
   cursor: pointer;
   border-radius: 50%;
@@ -61,7 +61,7 @@
 @media screen and (max-width: 768px) {
   .cart {
     position: relative;
-    max-width: 100%;
+    max-width: 60%;
     max-height: auto;
     box-shadow: none;
     background-color: inherit;

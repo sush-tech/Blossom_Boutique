@@ -7,9 +7,9 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import Nav from './components/Nav';
-// import Menu from './components/Menu';
 import { StoreProvider } from './utils/GlobalState';
-// import ToggleColorMode from './components/DarkMode';
+// import AppAppBar from './components/AppAppBar';
+
 
 
 const httpLink = createHttpLink({
