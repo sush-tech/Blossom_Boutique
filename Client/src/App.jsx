@@ -37,8 +37,6 @@ function App() {
       <div>
         <StoreProvider>
           <Nav /> 
-          {/* <DarkMode />//Todo: similar to store provider you gotta implement this */}
-          {/* <APPBAR /> Todo: this should come under if condiiton for logged in */}
           <Outlet />
         </StoreProvider>
       </div>
