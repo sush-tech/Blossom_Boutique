@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { useStoreContext } from '../../utils/GlobalState';
-// import { Box, Tab, Tabs, Typography } from "@mui/material";
+import { Tab, Tabs } from '@mui/material';
+import Box from '@mui/material/Box';
 import {
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
@@ -10,6 +11,7 @@ import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 
 function CategoryMenu() {
+
   const [state, dispatch] = useStoreContext();
 
   const { categories } = state;
@@ -42,91 +44,48 @@ function CategoryMenu() {
     });
   };
 
-  // const [currentTabIndex, setCurrentTabIndex] = useState(0);
- 
-  //   const handleTabChange = (e, tabIndex) => {
-  //     console.log(tabIndex);
-  //     setCurrentTabIndex(tabIndex);
-  //   };
-
   return (
     <div>
-      <h2>Choose a Category:</h2>
+
+
+
+
+
+<Box sx={{ width: '100%' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+
+
+<Tabs >
       {categories.map((item) => (
-        <button
+        <Tab
+        textColor="secondary"
           key={item._id}
+          label={item.name}
           onClick={() => {
             handleClick(item._id);
           }}
         >
           {item.name}
-        </button>
+        </Tab>
       ))}
-      <button
+      <Tab
+      label="ALL"
         onClick={() => {
           handleClick('');
         }}
       >
         All
-      </button>
-    </div>
-  );
-
-
-
-  // return (
-  //   <div>
-  //     <h2>Choose a Category:</h2>
-  //     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-  //     <Tabs value={currentTabIndex} onChange={handleTabChange}>
-
-  //     {categories.map((item) => (
-         
-  //       <Tab
-  //         label="categories" 
-  //         key={item._id}
-  //         onClick={() => {
-  //           handleClick(item._id);
-  //         }}
-  //       >
-  //         {item.name}
-  //       </Tab>
-  //     ))}
-  //     <Tab
-  //       onClick={() => {
-  //         handleClick('');
-  //       }}
-  //     >
-  //       All
-  //     </Tab>
-
-  //     </Tabs>
-  //     </Box>
-
-
+      </Tab>
+      </Tabs> 
       
-  //       {/* TAB Signup Contents */}
-  //       {currentTabIndex === 1 && (
-  //         <Box sx={{ p: 3 }}>
-  //           <Link to="/signup"></Link>
-  //         </Box>
-  //       )}
- 
-  //       {/* TAB Home Contents */}
-  //       {currentTabIndex === 2 && (
-  //         <Box sx={{ p: 3 }}>
-  //           <Link to="/"></Link>
-  //         </Box>
-  //       )}
-
-
-
-
-
-  //   </div>
-  // );
+      
+      </Box>
+      </Box>
+      </div>
+  );
 
 
 }
 
 export default CategoryMenu;
+

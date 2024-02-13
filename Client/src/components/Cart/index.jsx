@@ -171,10 +171,10 @@ const Cart = () => {
             <strong>Total: ${calculateTotal()}</strong>
             <DialogActions>
               {Auth.loggedIn() ? (
-              <Button autoFocus onClick={submitCheckout}>Checkout</Button>
+              <Button autoFocus variant="contained" onClick={submitCheckout}>Checkout</Button>
             ) : (
-              <Button onClick={handleClose}>
-                 <Link to="/login">(log in to check out)</Link>
+              <Button onClick={handleClose} component={Link} to="/login">
+                 (log in to check out)
               </Button>
             )}
         </DialogActions>
