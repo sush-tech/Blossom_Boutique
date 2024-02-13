@@ -87,8 +87,7 @@ export default function FAQ() {
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
               Absolutely! We offer a hassle-free return policy. If you&apos;re not
-              completely satisfied, you can return the product within [number of
-              days] days for a full refund or exchange.
+              completely satisfied, you can return the product within 2 days for a full refund or exchange.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -102,7 +101,7 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              What makes your product stand out from others in the market?
+              Why send flowers with Blossom Boutique?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -111,9 +110,10 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Our product distinguishes itself through its adaptability, durability,
-              and innovative features. We prioritize user satisfaction and
-              continually strive to exceed expectations in every aspect.
+           When you choose to send flowers with Blossom Boutique, you're choosing more than just a gift; you're choosing an experience. 
+          We understand the importance of thoughtful, personal gifting. Every arrangement you send through Lovingly is more than just the flowers. 
+          Our flowers arrive fresh, beautifully arranged, and ready to brighten your recipient's day.
+
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -127,7 +127,7 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Is there a warranty on the product, and what does it cover?
+              Do you offer same day delivery?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -136,10 +136,9 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Yes, our product comes with a [length of warranty] warranty. It covers
-              defects in materials and workmanship. If you encounter any issues
-              covered by the warranty, please contact our customer support for
-              assistance.
+              Yes, we absolutely do! At Lovingly, we understand that sometimes you need to send a special gift in a hurry. That's why we offer same-day delivery on many of our arrangements. 
+              Just place your order, and we'll make sure your thoughtful gift reaches its destination the very same day. Please keep in mind that the delivery cut-off times may vary based on location and availability. 
+              Typically if you get your order in before 2pm in the time zone you are sending to, you’ll still have same-day delivery available!
             </Typography>
           </AccordionDetails>
         </Accordion>

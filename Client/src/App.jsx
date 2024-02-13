@@ -37,6 +37,7 @@ function App() {
       <div>
         <StoreProvider>
           <Nav /> 
+      
           <Outlet />
         </StoreProvider>
       </div>

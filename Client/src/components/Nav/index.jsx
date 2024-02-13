@@ -9,7 +9,7 @@ function Nav() {
  
     if (Auth.loggedIn()) {
       return (
-          <AppBar position = 'static'>
+          <AppBar position = 'static' style={{ background: "#8ac7c0" }}>
             <Toolbar>
               <IconButton size = 'large' edge = 'start' color ='inherit' aria-label='logo'>
                 <AcUnitIcon/>
@@ -31,7 +31,7 @@ function Nav() {
     } else {
       return(
 
-      <AppBar position = 'static'>
+      <AppBar position = 'static' sx={{ bgcolor: "#8ac7c0"}}>
         <Toolbar>
           <IconButton size='large' edge='start' color='inherit' aria-label='logo'> 
           <AcUnitIcon/>
@@ -40,7 +40,7 @@ function Nav() {
             BLOSSOM BOUTIQUE
           </Typography>
           <Stack direction='row' spacing={2}>
-            <Button color='inherit' component={Link} to="/" >Home</Button>
+            <Button color="inherit" component={Link} to="/" >Home</Button>
             <Button color='inherit' component={Link} to="/aboutUs" >About Us</Button>
             <Button color='inherit' component={Link} to="/login">Login</Button>
             {/* <Button color='inherit'><Cart /></Button> */}

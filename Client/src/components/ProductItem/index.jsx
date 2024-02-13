@@ -60,6 +60,7 @@ function ProductItem(item) {
     <div className="card px-2 py-2">
       <Link to={`/products/${_id}`}>
         <img
+        id='zoom'
           alt={name}
           src={`/images/${image}`}
         />
@@ -70,7 +71,7 @@ function ProductItem(item) {
         <span>${price}</span>
       </div>
 
-      <Button variant="contained" onClick={() => { addToCart(); handleClick();}}>Add to Cart</Button>
+      <Button color="success" variant="contained" onClick={() => { addToCart(); handleClick();}}>Add to Cart</Button>
                 <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
                   <Alert
                       onClose={handleClose}

@@ -88,9 +88,9 @@ a {
   /* height: 200px; */
 }
 
-a:hover {
+/* a:hover {
   text-decoration: underline;
-}
+} */
 
 /* header {
   background-image: url("../public/Logos/logo-png.png");
@@ -124,6 +124,9 @@ button[disabled] {
 
 img {
   max-width: 100%;
+}
+#zoom:hover{
+  transform: scale(1.5);
 }
 
 span[role="img"] {

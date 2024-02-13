@@ -87,50 +87,47 @@ db.once('open', async () => {
       price: 55.99,
       quantity: 30
     },
-  //   {
-  //     name: 'Tales at Bedtime',
-  //     category: categories[3]._id,
-  //     description:
-  //       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-  //     image: 'bedtime-book.jpg',
-  //     price: 9.99,
-  //     quantity: 100
-  //   },
-  //   {
-  //     name: 'Spinning Top',
-  //     category: categories[4]._id,
-  //     description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-  //     image: 'spinning-top.jpg',
-  //     price: 1.99,
-  //     quantity: 1000
-  //   },
-  //   {
-  //     name: 'Set of Plastic Horses',
-  //     category: categories[4]._id,
-  //     description:
-  //       'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-  //     image: 'plastic-horses.jpg',
-  //     price: 2.99,
-  //     quantity: 1000
-  //   },
-  //   {
-  //     name: 'Teddy Bear',
-  //     category: categories[4]._id,
-  //     description:
-  //       'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-  //     image: 'teddy-bear.jpg',
-  //     price: 7.99,
-  //     quantity: 100
-  //   },
-  //   {
-  //     name: 'Alphabet Blocks',
-  //     category: categories[4]._id,
-  //     description:
-  //       'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-  //     image: 'alphabet-blocks.jpg',
-  //     price: 9.99,
-  //     quantity: 600
-  //   }
+    {
+      name: 'Romance Melody ',
+      category: categories[0]._id,
+      description: "Want to thrill the love of your life? Surprise them with these gem-toned beauties that will make their special day sparkle. Purple Peruvian lilies are arranged with stunning red spray roses and stock. Upgrade to Deluxe or Premium to add luxurious red roses.",
+      image: 'romance_melody.webp',
+      price: 39.99,
+      quantity: 100
+    },
+    {
+      name: 'Daisy Day Blush',
+      category: categories[2]._id,
+      description: 'Still looking for that perfect gift? Think pink! This blushing bouquet is a lovely indulgence when you want them to feel pampered and special. Delight them with Gerbera daisies, Stargazer lilies, and more arranged in a classic vase.',
+      image: 'Daisy_day_blush.webp',
+      price: 19.99,
+      quantity: 1000
+    },
+    {
+      name: 'Passionate Faith Sympathy',
+      category: categories[3]._id,
+      description:
+        'A symbol of life everlasting, this standing wreath is a classic way to provide comfort and love during a difficult time. Celebrate the life and legacy of a loved one with our Passionate Faith Sympathy Wreath™.This standing sympathy wreath features red roses, white carnations, and fresh greenery.',
+      image: 'Passionate_faith_sympathy.webp',
+      price: 42.99,
+      quantity: 100
+    },
+    {
+      name: 'Soothing Spa Basket',
+      category: categories[5]._id,
+      description:'Ahhhh—a day at the spa. Give the gift of blissful relaxation with this soothing basket of goodies. They’ll feel so loved and pampered!Treat them to scented body wash, body lotion, a lovely scented candle, an exfoliating loofah, and more. Items may differ from those pictured due to local availability.',
+      image: 'soothing_spa_basket.webp',
+      price: 57.99,
+      quantity: 100
+    },
+    {
+      name: 'High-Rise Prize',
+      category: categories[4]._id,
+      description:'Take your gift to new heights! Sleek and dazzling, this showstopper makes a big statement. It’s sure to wow your loved one or dear friend—no matter the occasion.Stunning birds of paradise stand out among lilies, spray roses, and more.',
+      image: 'high-rise-prize.webp',
+      price: 29.99,
+      quantity: 600
+    }
   ]);
 
   console.log('products seeded');
