@@ -9,7 +9,7 @@ function Nav() {
  
     if (Auth.loggedIn()) {
       return (
-          <AppBar position = 'static' style={{ background: "#8ac7c0" }}>
+          <AppBar position = 'static' style={{ background: "green" }}>
             <Toolbar>
               <IconButton size = 'large' edge = 'start' color ='inherit' aria-label='logo'>
                 <AcUnitIcon/>
@@ -22,8 +22,9 @@ function Nav() {
                 <Button color='inherit' component={Link} to="/aboutUs" >About Us</Button>
                 <Button color='inherit'component={Link} to="/orderHistory" >Order History</Button>
                 {/* <ToggleColorMode></ToggleColorMode> */}
-                {/* <Button color='inherit' ><Cart /></Button> */}
+                <Button color='inherit' ><Cart /></Button>
                 <Button color='inherit' component={Link} to="/" onClick={() => Auth.logout()}>Log Out</Button>
+                
               </Stack>
             </Toolbar>
           </AppBar>
@@ -31,7 +32,7 @@ function Nav() {
     } else {
       return(
 
-      <AppBar position = 'static' sx={{ bgcolor: "#8ac7c0"}}>
+      <AppBar position = 'static' sx={{ bgcolor: "green"}}>
         <Toolbar>
           <IconButton size='large' edge='start' color='inherit' aria-label='logo'> 
           <AcUnitIcon/>
@@ -43,7 +44,8 @@ function Nav() {
             <Button color="inherit" component={Link} to="/" >Home</Button>
             <Button color='inherit' component={Link} to="/aboutUs" >About Us</Button>
             <Button color='inherit' component={Link} to="/login">Login</Button>
-            {/* <Button color='inherit'><Cart /></Button> */}
+           
+            <Button color='inherit'><Cart /></Button>
             {/* todo: cart placement */}
           </Stack>
         </Toolbar>

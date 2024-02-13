@@ -7,13 +7,13 @@ export default function FixedContainer() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container  maxWidth="sm">
+      <Container>
      <Box
     
   component="img"
-  
+  className= "header_image"
   alt="The house from the offer."
-  src="/images/bouquet.jpg"
+  src="/images/valentine.jpg"
 />
       </Container>
     </React.Fragment>

@@ -91,13 +91,13 @@ const Cart = () => {
     });
   }
 
-  if (!state.cartOpen) {
-    return (
-      <div className="cart-closed" onClick={toggleCart}>
-       <Button><ShoppingCartIcon/> Open Cart</Button> 
-      </div>
-    );
-  }
+  // if (false) {
+  //   return (
+  //     <div className="cart-closed" onClick={toggleCart}>
+  //      <Button><ShoppingCartIcon/> Open Cart</Button> 
+  //     </div>
+  //   );
+  // }
 
   // return (
   //   <div className="cart">
@@ -137,7 +137,7 @@ const Cart = () => {
     
     <React.Fragment>
       
-      <Button variant="contained" onClick={handleClickOpen}>
+      <Button color="inherit" onClick={handleClickOpen}>
       <ShoppingCartIcon/> Open Cart
       </Button>
       <BootstrapDialog
