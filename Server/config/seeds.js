@@ -8,12 +8,24 @@ db.once('open', async () => {
   await cleanDB('User', 'users');
 
   const categories = await Category.insertMany([
-    { name: 'Valentines Day' },
-    { name: 'Deal Of The Day' },
-    { name: 'Birthday' },
-    { name: 'Sympathy' },
-    { name: 'Flowers' },
-    { name: 'Plants & Gifts' }
+    { name: 'Valentines Day' ,
+      image:'Sweet_Memory_Planter.webp'
+    },
+    { name: 'Deal Of The Day',
+      image:'Sweet_Memory_Planter.webp'
+    },
+    { name: 'Birthday',
+      image:'Sweet_Memory_Planter.webp' 
+    },
+    { name: 'Sympathy',
+      image:'Sweet_Memory_Planter.webp' 
+    },
+    { name: 'Flowers',
+      image:'Sweet_Memory_Planter.webp' 
+    },
+    { name: 'Plants & Gifts',
+      image:'Sweet_Memory_Planter.webp' 
+    }
   ]);
 
   console.log('categories seeded');

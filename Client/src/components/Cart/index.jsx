@@ -94,7 +94,7 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="cart-closed" onClick={toggleCart}>
-        <ShoppingCartIcon/>
+       <Button><ShoppingCartIcon/> Open Cart</Button> 
       </div>
     );
   }
@@ -136,16 +136,16 @@ const Cart = () => {
   return (
     
     <React.Fragment>
-      <ShoppingCartIcon/> 
+      
       <Button variant="contained" onClick={handleClickOpen}>
-      Open Cart
+      <ShoppingCartIcon/> Open Cart
       </Button>
       <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
       >
-        <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
+        <DialogTitle sx={{ m: 2, p: 3 }} id="customized-dialog-title">
           Shopping Cart
         </DialogTitle>
         <IconButton
@@ -173,7 +173,7 @@ const Cart = () => {
               {Auth.loggedIn() ? (
               <Button autoFocus variant="contained" onClick={submitCheckout}>Checkout</Button>
             ) : (
-              <Button onClick={handleClose} component={Link} to="/login">
+              <Button autoFocus onClick={handleClose} component={Link} to="/login">
                  (log in to check out)
               </Button>
             )}

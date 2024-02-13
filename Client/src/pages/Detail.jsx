@@ -16,7 +16,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
-
+import Box from '@mui/material/Box';
 
 function Detail() {
 
@@ -105,7 +105,7 @@ function Detail() {
     <>
       {currentProduct && cart ? (
         <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
+          {/* <Link to="/">← Back to Products</Link> */}
 
           <h2>{currentProduct.name}</h2>
 
@@ -113,6 +113,7 @@ function Detail() {
 
           <p>
             <strong>Price:</strong>${currentProduct.price}{' '}
+            <Box display="flex" justifyContent="space-between">
             <Button variant="contained" onClick={() => { addToCart(); handleClick();}}>Add to Cart</Button>
                 <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
                   <Alert
@@ -131,6 +132,7 @@ function Detail() {
             >
               Remove from Cart
             </Button>
+            </Box>
           </p>
 
           <img
@@ -139,7 +141,7 @@ function Detail() {
           />
         </div>
       ) : null}
-      {loading ? <img src={spinner} alt="loading" /> : null}
+      {loading ? <img src={spinner} alt="loading" class="image-upload" /> : null}
       <Cart />
     </>
   );

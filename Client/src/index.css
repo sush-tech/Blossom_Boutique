@@ -85,17 +85,17 @@ a {
   text-decoration: none;
   font-weight: bold;
   width: auto;
-  height: 200px;
+  /* height: 200px; */
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-header {
+/* header {
   background-image: url("../public/Logos/logo-png.png");
-  background-position: left;
-}
+  background-size: auto;
+} */
 
 header a {
   color: var(--primary);
@@ -133,7 +133,16 @@ span[role="img"] {
 form {
   width: 100%;
 }
-
+.image-upload{
+  position:relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  max-height: 14px;
+}
 input {
   font-size: 1rem;
   padding: 0.25rem;
@@ -157,7 +166,9 @@ input:focus {
 
 .flex-row {
   display: flex;
+  padding: 10%;
   flex-wrap: wrap;
+  
 }
 
 .space-between {

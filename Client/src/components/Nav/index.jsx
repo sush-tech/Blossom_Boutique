@@ -18,10 +18,12 @@ function Nav() {
                 BLOSSOM BOUTIQUE
               </Typography>
               <Stack direction='row' spacing={2}>
-                <Button color='inherit'component={Link} to="/orderHistory" >Order History</Button>
                 <Button color='inherit' component={Link} to="/" >Home</Button>
-                <Button color='inherit' compoennt={Link} to="/" >Cart</Button>
-                <Button color='inherit' compoennt={Link} to="/" onClick={() => Auth.logout()}>Log Out</Button>
+                <Button color='inherit' component={Link} to="/aboutUs" >About Us</Button>
+                <Button color='inherit'component={Link} to="/orderHistory" >Order History</Button>
+                {/* <ToggleColorMode></ToggleColorMode> */}
+                {/* <Button color='inherit' ><Cart /></Button> */}
+                <Button color='inherit' component={Link} to="/" onClick={() => Auth.logout()}>Log Out</Button>
               </Stack>
             </Toolbar>
           </AppBar>
@@ -38,10 +40,11 @@ function Nav() {
             BLOSSOM BOUTIQUE
           </Typography>
           <Stack direction='row' spacing={2}>
-            <Button color='inherit' component={Link} to="/login">Login</Button>
             <Button color='inherit' component={Link} to="/" >Home</Button>
-            <Button color='inherit' component={Link} to="/contact" >Contact Us</Button>
-            <Button color='inherit'><Cart />Cart</Button>
+            <Button color='inherit' component={Link} to="/aboutUs" >About Us</Button>
+            <Button color='inherit' component={Link} to="/login">Login</Button>
+            {/* <Button color='inherit'><Cart /></Button> */}
+            {/* todo: cart placement */}
           </Stack>
         </Toolbar>
       </AppBar>

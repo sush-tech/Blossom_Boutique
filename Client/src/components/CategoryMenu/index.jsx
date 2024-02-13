@@ -46,11 +46,11 @@ function CategoryMenu() {
 
   return (
     <div>
+{/* <header>
+<img src={`/images/${image}`}/>
+</header> */}
 
-
-
-
-
+{/* todo: add pictures and use them below tabs once clicked on category */}
 <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
 

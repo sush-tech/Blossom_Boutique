@@ -10,7 +10,7 @@ import Error from './pages/Error';
 import Detail from './pages/Detail.jsx';
 import Success from './pages/Success.jsx';
 import OrderHistory from './pages/OrderHistory.jsx';
-import Contact from './pages/Contact.jsx';
+import AboutUs from './pages/AboutUs.jsx';
 
 
 const router = createBrowserRouter([
@@ -38,8 +38,8 @@ const router = createBrowserRouter([
         path: '/orderHistory',
         element: <OrderHistory />
       },{
-        path: '/contact',
-        element: <Contact />
+        path: '/aboutUs',
+        element: <AboutUs />
       }
     ]
   }
