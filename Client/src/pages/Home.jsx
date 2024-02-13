@@ -12,8 +12,8 @@ const Home = () => {
   console.log("home page");
   return ( 
     <div>
-      <Header/>
       <CategoryMenu />
+      <Header/>
       <ProductList />
       <Cart />
       <Testimonials/>

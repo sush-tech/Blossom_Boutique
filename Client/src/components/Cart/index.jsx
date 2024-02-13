@@ -6,7 +6,7 @@ import { idbPromise } from '../../utils/helpers';
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
-import { TOGGLE_CART , ADD_MULTIPLE_TO_CART } from '../../utils/actions';
+import {  ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import CloseIcon from '@mui/icons-material/Close';
 import './style.css';
@@ -65,9 +65,9 @@ const Cart = () => {
     }
   }, [state.cart.length, dispatch]);
 
-  function toggleCart() {
-    dispatch({ type: TOGGLE_CART });
-  }
+  // function toggleCart() {
+  //   dispatch({ type: TOGGLE_CART });
+  // }
 
   function calculateTotal() {
     let sum = 0;
@@ -91,9 +91,9 @@ const Cart = () => {
     });
   }
 
-  // if (false) {
+  // if (!state.cart.open) {
   //   return (
-  //     <div className="cart-closed" onClick={toggleCart}>
+  //     <div className="cart-closed" >
   //      <Button><ShoppingCartIcon/> Open Cart</Button> 
   //     </div>
   //   );
@@ -138,7 +138,7 @@ const Cart = () => {
     <React.Fragment>
       
       <Button color="inherit" onClick={handleClickOpen}>
-      <ShoppingCartIcon/> Open Cart
+      <ShoppingCartIcon/> Cart
       </Button>
       <BootstrapDialog
         onClose={handleClose}
