@@ -11,6 +11,7 @@ This is a flower Delivery Website !!
 *[General Info](#general-information)
 *[Demonstration](#demonstration)
 *[Live Application Link](#live-application-link)
+*[Future Developments](#future-developments)
 *[References](#references)
 *[License](#license)
 
@@ -25,8 +26,6 @@ Includes following features/tech :
     - React.js, UI components.
     - Redux to manage application's state.
 
-Additional Features:
-    - This can be downloaded as a Progressive Web Application(PWA), making it user-friendly.
 
 ## Installation Guide
 
@@ -42,12 +41,12 @@ Install dependencies
 npm init --y
 ``` 
 ```terminal
-npm install express sequelize mysql2
+npm install 
 ```
 
 ## General Information
 
-This is using MERN stack.
+This is using MERN stack. The Landing page has a nav bar with Home, Login, About Us, cart ( logout and order history available upon login). This website shows up variosu categories which describe occasions. Youc an choose form those categories the flower arrangements you like. you can add them to cart or remove them from cart depending on your choice. Once thats done, you can click on cart and checkout if logged in, or else you would be redirected to the login page where you have an option to signup if new customer. Once you login, on clickign checkout button, you are redirected to the stripe payment page where you make the payment for your order. Once payment is succesfully you are shown a review page to rate the total experience, then redirected to home page. If you scroll down you see the testimonials from other customers and Frequently Asked Questions section with all the FAQs, also there is a footer area which is still work in progress for the functionality.
 
 ## Demonstration
 
@@ -55,7 +54,23 @@ https://drive.google.com/file/d/1BM4ZTg0Di5025g2qKY9JKA6WHtGJwl0h/view
 
 ## Live Application Link
 
+Still working on it..
+
+## Future Developments
+
+Add a profile page for the user 
+Create an Admin account
+Add Address & Calendar Page for Scheduling Delivery
+Add reviews for each product
+Add search feature
+Add functionality for the footer content
+Ability to send emails with latest updates subscription-based.
+
 ## References
+      -  https://stackoverflow.com/
+      -  https://mui.com/material-ui/
+      -  https://www.w3schools.com/
+      -  Previous Bootcamp Classes
 
 ## License
  
