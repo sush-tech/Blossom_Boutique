@@ -15,7 +15,6 @@ const Home = () => {
       <CategoryMenu />
       <Header/>
       <ProductList />
-      <Cart />
       <Testimonials/>
       <FAQ/>
       <Footer/>
