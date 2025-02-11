@@ -32,7 +32,7 @@ Includes following features/tech :
 To get started clone this repository using 
 <br>
 ```terminal
-git clone https://github.com/sush-tech/E-Commerce-Back-End.git
+git clone https://github.com/sush-tech/Blossom_Boutique.git
 ```
 Both Node.js and Mongoose must be installed on your computer.
 
